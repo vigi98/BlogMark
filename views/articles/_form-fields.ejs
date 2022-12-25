@@ -1,0 +1,20 @@
+<div class="form-group">
+    <label for="title">Title</label>
+    <input required type="text" value="<%=locals.article.title%>" name="title" id="title" class="form-control mb-2">
+</div>
+
+<div class="form-group">
+    <label for="description">Description</label>
+    <textarea name="description" id="description" class="form-control mb-2" ><%=locals.article.description%></textarea>
+</div>
+
+<div class="form-group">
+    <label for="markdown">Markdown  </label>
+    <a href="https://blog.greenroots.info/20-useful-markdown-syntaxes-for-developers" style="text-decoration: none" class="link-warning" target="_blank">
+        *help</a> 
+    <textarea required name="markdown" id="markdown" class="form-control mb-4" ><%=locals.article.markdown%></textarea>
+    
+</div>
+
+<a href="/" class="btn btn-danger">Cancel</a>
+<button type="submit" class="btn btn-primary">Save</button>
