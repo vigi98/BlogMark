@@ -1,0 +1,33 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.headingUpdation{
+    text-align: left;
+    padding-left: 0px;
+}
+
+.cueCardBackground{
+    background-image: url('/img/lightGreen.jpg');
+    /* background-image: url('/img/back2.jpg'); */
+}
+
+.showBlogBackground{
+    background-color: rgb(235, 240, 240);
+    border-radius: 10px;
+}
+
+.backgroundImage{
+    background-image: url('/img/back2.jpg');
+}
+
+h1{
+    text-align: center;
+    padding: 20px;
+    color:rgb(0, 0, 0);
+    margin: 10px 0px;
+    margin-bottom:15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+    font-weight:300;
+}
