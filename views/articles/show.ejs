@@ -7,17 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
     crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/style.css">
     <title>Show</title>
 </head>
-<body>
-    <div class="container">
-        <h1 class="mb-2"><%= article.title%></h1>
-        <div class="text-muted mb-2">
+<body class="backgroundImage">
+    <div class="container" >
+         <h1 class="headingUpdation"><%= article.title%></h1>
+
+         <div class="text-muted">
             <%=article.createdAt.toLocaleDateString()%>
         </div>
-        <a href="/" class="btn btn-secondary">All Articles'</a>
-        <a href="/articles/edit/<%=article.id%>" class="btn btn-info">Edit</a>
-        <div class="mt-2 ">
+        <a href="/" class="btn btn-secondary mt-2">All Articles</a>
+
+       
+        <!-- <a href="/articles/edit/<%=article.id%>" class="btn btn-info">Edit</a> -->
+        <div class="mt-4 p-4 showBlogBackground">
             <!-- we have to render html and not print in form of text(hence not using %= ). if we give -->
             <%-article.sanitizedHtml%>
         </div>
