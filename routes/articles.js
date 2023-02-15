@@ -13,6 +13,8 @@ router.get('/edit/:id',async(req,res)=>{
 
 router.get('/:slug',async(req,res)=>{
  try{
+  //req.params.slug: to get id from url :slug
+  //http://localhost:3000/user?name=Gourav&age=11 -> for this req.query.name
  const article= await Article.findOne({slug:req.params.slug});
  if(article==null) res.redirect('/');
  res.render('articles/show',{article:article});
@@ -23,7 +25,7 @@ router.get('/:slug',async(req,res)=>{
 });
 
 router.post('/', async (req,res)=>{
-  let article= new Article({
+  let article= new Article({// let. if const will give error as we are reassigning it at article.save()
     title:req.body.title,
     description:req.body.description,
     markdown:req.body.markdown
@@ -32,7 +34,9 @@ router.post('/', async (req,res)=>{
       article =await article.save();
       res.redirect(`/articles/${article.slug}`);
   }catch(e){
+    //Issues like missing values or Slugify issue
     console.log("Issue:"+e);
+
      res.render('articles/new',{article:article});
   }
 });
