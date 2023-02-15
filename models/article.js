@@ -43,6 +43,7 @@ sanitizedHtml:{
 //before saving the document 'validate' is called
 articleSchema.pre('validate',function(next){
     if(this.title) {
+        //lowercase and (strict)remove special character like :,',','/' and then creates slug
         this.slug=slugify(this.title,{lower:true,strict:true});
     }
 
